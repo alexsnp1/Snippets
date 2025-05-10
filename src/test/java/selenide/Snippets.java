@@ -116,12 +116,17 @@ public class Snippets {
         actions().moveToElement($("div")).clickAndHold().moveByOffset(300, 200).release().perform();
         // ПЕРЕДВИНУТЬ МЫШКУ К ЭЛЕМЕНТУ "div", нажать на кнопку мыши и не отпускать ее, передвинуть курсор
         // на 300 пикселей слева направо и на 200 сверху вниз, отпустить клавишу мыши, выполнить все действия (типа закончить как я понял)
+        //ПЕРЕДВИНУТЬ ОДИН ЭЛЕМЕНТ К ДРУГОМУ ЭЛЕМЕНТУ
+        actions().clickAndHold($("#column-a")).moveToElement($("#column-b")).release().perform();
+        //ИЛИ ТАК
+        //$("#column-a").dragAndDropTo($("#column-b"));
 
         // old html actions don't work with many modern frameworks
         $("").selectOption("dropdown_option");
         // работает с дропдаунами старыми
         //новые дропдауны работают двумя кликами.
         $("").selectRadio("radio_options"); //работа с радиобаттонами (кружками). То же самое с чекбоксами
+        // МОЖНО ЭТО ДЕЛАТЬ ПРОСТО ЧЕРЕЗ ОБЫЧНЫЙ $("label[for='hobbies-checkbox-2']").click();
 
     } // ДЕЙСТВИЯ
 

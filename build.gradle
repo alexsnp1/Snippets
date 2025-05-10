@@ -1,20 +1,20 @@
 plugins {
-    id 'java-library'
+    id 'java-library' // используем язык Java
 }
 
 repositories {
-    mavenCentral()
+    mavenCentral() // используем библиотеку maven central
 }
 
 dependencies {
     testImplementation(
-            "com.codeborne:selenide:6.19.1",
-            "org.junit.jupiter:junit-jupiter:5.10.0",
+            "com.codeborne:selenide:6.19.1", // работаем с селенидом
+            "org.junit.jupiter:junit-jupiter:5.10.0", // работаем с JUnit 5
             'org.slf4j:slf4j-simple:2.0.7' //убирает какие-то ошибки в терминале
 
     )
 }
 test {
     systemProperties += System.properties //без нее все минус параметры будут проглатываться
-    useJUnitPlatform()
+    useJUnitPlatform() // используем JUNit 5
 }
